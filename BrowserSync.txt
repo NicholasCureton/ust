@@ -1,0 +1,5 @@
+Browser Sync
+------------
+Type this on terminal and in the web dev folder.
+
+$ browser-sync --server --files "*.html, *.css, *.js"

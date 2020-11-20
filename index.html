@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/mongoDB.css">
+  <title>NavBarTest</title>
+  <style>
+    div.navShadow {box-shadow: 0 10px 30px rgba(0,0,0,0.08);}
+    i {color: #888;}    i:hover {color: #fff;}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="w3-top">
+   
+    <!-- Draw a bar with w3-bar to use as nav bar , w3-card for shadow effect -->
+    <div class="w3-bar w3-left-align w3-padding w3-white navShadow">
+     
+      <!-- Hamberger icon -->
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-margin-16px w3-hover-theme w3-white w3-round-large"
+      href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars w3-xlarge"></i></a>
+     
+      <!-- MAIN LOGO -->
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme w3-round-large w3-text-dark-gray">1-LOGO</a>
+     
+      <!-- Desktop Nav Menu Items -->
+      <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-padding w3-text-dark-gray">HOME</a>
+      <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Work</a>
+      <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Price</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Contact</a>
+      <a href="#join" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray">Join</a>
+      <a href="#login" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray">Login</a>
+    </div>
+   
+    <!-- Dropdown Navbar on small screens -->
+    <!-- Make a dropdown box with w3-bar-block  -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#team" class="w3-bar-item w3-button">Team</a>
+      <a href="#work" class="w3-bar-item w3-button">Work</a>
+      <a href="#pricing" class="w3-bar-item w3-button">Price</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="#" class="w3-bar-item w3-button">Search</a>
+    </div>
+   
+  </nav> 
+
+  <!-- Image Header -->
+  <div class="w3-display-container">
+    <img src="/img/b3d-robot-splash.jpg" alt="Blender_Robot"
+    style="width:100%;min-height:720px; object-fit: cover; object-position: 20% 0">
+  </div>
+
+ <script>
+  // Script for side navigation
+  function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+  }
+
+  // Close side navigation
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  // Used to toggle the menu on smaller screens when clicking on the menu button
+  function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+</body>
+</html>
