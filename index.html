@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/mongoDB.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>ဦးစိတ်တို</title>
   <style>
     div.navShadow {box-shadow: 0 10px 30px rgba(0,0,0,0.08);}
@@ -16,6 +16,30 @@
     h1, h2 {
       font-family: 'Roboto', sans-serif;
       color: #444;
+    }
+    a#logo {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      color: #444;
+      font-size: 30px;
+      margin-top: 0em;
+      margin-bottom: 2px;
+      padding: 0 10px 2px 14px;
+      text-decoration: none;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    a#navBarItems{
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #444;
+      text-decoration: none;
+      position: relative;
+      top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
   </style>
@@ -27,24 +51,34 @@
   <nav class="w3-top">
    
     <!-- Draw a bar with w3-bar to use as nav bar , w3-card for shadow effect -->
-    <div class="w3-bar w3-left-align w3-padding w3-white navShadow">
+    <div class="w3-bar w3-left-align w3-white navShadow">
      
       <!-- Hamberger icon -->
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-margin-16px w3-hover-theme w3-white w3-round-large"
-      href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars w3-xlarge"></i></a>
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right
+         w3-margin-16px w3-hover-white w3-white w3-round-large" href="javascript:void(0);" onclick="openNav()"
+         style="margin-top: 3px">
+         <i class="fa fa-bars w3-xlarge" style="color: #51AB54;"></i></a>
      
       <!-- MAIN LOGO -->
-      <a href="#" class="w3-bar-item w3-button w3-hover-theme w3-round-large w3-text-dark-gray">Ko Sai</a>
+      <a class="w3-bar-item w3-round-large"
+         href="#" id="logo">Ka<span style="color: #479e4a;">i</span>zuren</a>
      
       <!-- Desktop Nav Menu Items -->
-      <a href="#home" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-padding w3-text-dark-gray">HOME</a>
-      <a href="#blender" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Blender-3D</a>
-      <a href="#photoshop" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Photoshop</a>
-      <a href="#illustrator" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">illustrator</a>
-      <a href="#graphicDesign" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray">Graphic Design</a>
+      <!-- <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray" 
+         id="navBarItems" href="#home">Home</a> -->
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray"
+      id="navBarItems" href="blender.html">Blender-3D</a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray" 
+         id="navBarItems" href="#photoshopi">Photoshop</a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray"
+         id="navBarItems" href="#illustrator">illustrator</a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-text-dark-gray" 
+         id="navBarItems" href="#graphicDesign">Graphic Design</a>
      
-      <a href="#join" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray">Join</a>
-      <a href="#login" class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray">Login</a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray"
+        id="navBarItems" href="#join">Join</a>
+      <a class="w3-bar-item w3-button w3-hide-small w3-hover-theme w3-round-large w3-right w3-text-dark-gray"
+        id="navBarItems" href="#login">Login</a>
     </div>
    
     <!-- Dropdown Navbar on small screens -->
@@ -67,7 +101,7 @@
    
     <!--  Header Texts Here -->
     <div class="w3-container w3-display-middle w3-center w3-text-dark-gray" style="margin-top: auto">
-      <h1>A Thousand Miles Journey Starts With One Step</h1> 
+      <h1 style="color: #116149; font-weight: 500;">A Thousand Miles Journey Starts With One Step</h1> 
       <br>
       <!--  Header Button  -->
       <button onclick="document.getElementById('id01').style.display='block'"
@@ -88,7 +122,7 @@
       <div class="w3-card w3-white">
         <img src="img/card.jpg" alt="Snow" style="width:100%">
         <div class="w3-container">
-          <h3>Customer 1</h3>
+          <h3>Course 1</h3>
           <h4>Trade</h4>
           <p>Blablabla</p>
           <p>Blablabla</p>
@@ -102,7 +136,7 @@
       <div class="w3-card w3-white">
         <img src="img/card.jpg" alt="Lights" style="width:100%">
         <div class="w3-container">
-          <h3>Customer 2</h3>
+          <h3>Course 2</h3>
           <h4>Trade</h4>
           <p>Blablabla</p>
           <p>Blablabla</p>
@@ -116,7 +150,7 @@
       <div class="w3-card w3-white">
         <img src="img/card.jpg" alt="Mountains" style="width:100%">
         <div class="w3-container">
-          <h3>Customer 3</h3>
+          <h3>Course 3</h3>
           <h4>Trade</h4>
           <p>Blablabla</p>
           <p>Blablabla</p>
@@ -163,10 +197,13 @@
   </div>
 
 
-  <!-- Pricing Row -->
+  <!-- Courses Pricing Row -->
   <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
-    <h2>PRICING</h2>
+   
+    <h2>Courses Pricing</h2>
     <p>Choose a pricing plan that fits your needs.</p><br>
+    
+    <!-- Card One here -->
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme">
@@ -177,69 +214,84 @@
         <li class="w3-padding-16"><b>10</b> Domains</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
-          <span class="w3-opacity">per month</span>
+          <h2>20,000Ks</h2>
+          <span class="w3-opacity">for basic course</span>
         </li>
         <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+          <button class="w3-button w3-round-large w3-theme w3-padding-large">Sign Up</button>
         </li>
       </ul>
     </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-theme-l2">
-          <p class="w3-xlarge">Pro</p>
-        </li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
+   
+    <!-- Card One here -->
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme">
-          <p class="w3-xlarge">Premium</p>
+          <p class="w3-xlarge">Basic</p>
         </li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-padding-16"><b>10GB</b> Storage</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
-          <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
-          <span class="w3-opacity">per month</span>
+          <h2>20,000Ks</h2>
+          <span class="w3-opacity">for basic course</span>
         </li>
         <li class="w3-theme-l5 w3-padding-24">
-          <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+          <button class="w3-button w3-round-large w3-theme w3-padding-large">Sign Up</button>
         </li>
       </ul>
     </div>
+   
+    <!-- Card One here -->
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Basic</p>
+        </li>
+        <li class="w3-padding-16"><b>10GB</b> Storage</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2>20,000Ks</h2>
+          <span class="w3-opacity">for basic course</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-round-large w3-theme w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+
+
   </div>
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
     <h4>Follow Us</h4>
-    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <a class="w3-button w3-round-xlarge w3-large w3-theme" href="javascript:void(0)"
+       title="Facebook"><i class="w3-text-white fa fa-facebook"></i></a>
+    
+    <a class="w3-button w3-round-xlarge w3-large w3-theme" href="javascript:void(0)" title="Twitter">
+    <i class="w3-text-white fa fa-twitter"></i></a>
+   
+    <a class="w3-button w3-round-xlarge w3-large w3-theme" href="javascript:void(0)" title="Google +">
+    <i class="w3-text-white fa fa-google-plus"></i></a>
+   
+    <a class="w3-button w3-round-xlarge w3-large w3-theme" href="javascript:void(0)" title="Google +">
+    <i class="w3-text-white fa fa-instagram"></i></a>
+   
+    <a class="w3-button w3-round-xlarge w3-large w3-theme w3-hide-small" href="javascript:void(0)" title="Linkedin">
+    <i class="w3-text-white fa fa-linkedin"></i></a>
+   
+  <p>Copyright2020@<b>Kaizuren</b></p>
    
     <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
-      <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-          <i class="fa fa-chevron-circle-up"></i></span></a>
+      <span class="w3-text w3-padding w3-theme w3-hide-small">Go To Top</span>   
+      <a class="w3-button w3-round-xlarge w3-theme" href="#myPage"><span class="w3-xlarge">
+      <i class="w3-text-white fa fa-chevron-circle-up"></i></span></a>
     </div>
+   
   </footer>
 
 
